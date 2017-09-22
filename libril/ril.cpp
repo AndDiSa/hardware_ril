@@ -3698,6 +3698,7 @@ static int responseSSData(Parcel &p, void *response, size_t responselen) {
     p.writeInt32(p_cur->teleserviceType);
     p.writeInt32(p_cur->serviceClass);
     p.writeInt32(p_cur->result);
+    p.writeInt32(-1);
 
     if (isServiceTypeCfQuery(p_cur->serviceType, p_cur->requestType)) {
         RLOGD("responseSSData CF type, num of Cf elements %d", p_cur->cfData.numValidIndexes);
